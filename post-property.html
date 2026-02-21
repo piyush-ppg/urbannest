@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Property - UrbanNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-city"></i> UrbanNest
+            </a>
+            <a href="index.html" class="btn btn-ghost"><i class="fa-solid fa-xmark"></i> Close</a>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 800px; padding: 4rem 1rem;">
+        <div class="text-center" style="margin-bottom: 3rem;">
+            <h1>Sell or Rent your Property</h1>
+            <p class="text-muted">Reach over 1 million buyers and tenants. Post your property for free.</p>
+        </div>
+
+        <form id="postPropertyForm" class="card" style="padding: 2rem;" onsubmit="handlePostProperty(event)">
+
+            <!-- Step 1: Basic Details -->
+            <section style="margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Basic Details</h3>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Title (Catchy Headline)</label>
+                        <input type="text" id="propTitle" placeholder="e.g. Luxurious 3BHK in Bandra" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                    </div>
+                    <div>
+                        <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Property Type</label>
+                        <select id="propType" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                            <option value="Apartment">Apartment / Flat</option>
+                            <option value="House">Independent House / Villa</option>
+                            <option value="Land">Plot / Land</option>
+                            <option value="Commercial">Commercial Office</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Location</label>
+                    <input type="text" id="propLocation" placeholder="e.g. Mumbai, Bandra West" required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                </div>
+
+                <!-- AI Description Generator Placeholder Feature -->
+                <div style="margin-bottom: 1.5rem; position: relative;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Description</label>
+                    <textarea id="propDescription" rows="4" placeholder="Describe your property..." required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);"></textarea>
+                    
+                    <button type="button" class="btn" style="position: absolute; right: 0.5rem; bottom: 1rem; background: linear-gradient(135deg, #a855f7, #ec4899); color: white; padding: 0.3rem 0.8rem; font-size: 0.8rem; border-radius: 4px; display: flex; align-items: center; gap: 4px;" onclick="generateAIDescription()">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> AI Magic Write
+                    </button>
+                </div>
+            </section>
+
+            <!-- Step 2: Property Features -->
+            <section style="margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Property Features</h3>
+
+                <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Bedrooms (BHK)</label>
+                        <select id="propBhk"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                            <option value="1">1 BHK</option>
+                            <option value="2">2 BHK</option>
+                            <option value="3">3 BHK</option>
+                            <option value="4">4+ BHK</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 3: Price -->
+            <section style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Price Details</h3>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Expected Price (₹)</label>
+                    <input type="number" id="propPrice" placeholder="Enter Amount" required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                </div>
+            </section>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Post Property Now</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

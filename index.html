@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="UrbanNest - Find your dream home, apartment, or commercial property with AI-powered insights.">
+    <title>UrbanNest | Modern Real Estate Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-city"></i> UrbanNest
+            </a>
+
+            <nav class="nav-links hidden md:flex" style="display: flex; gap: 2rem; align-items: center;">
+                <a href="index.html" class="active">Home</a>
+                <a href="listing.html">Buy</a>
+                <a href="listing.html">Rent</a>
+                <a href="listing.html">Commercial</a>
+                <a href="#">New Projects</a>
+                <a href="#">Agents</a>
+            </nav>
+
+            <div class="flex items-center gap-sm">
+                <a href="#" class="btn btn-ghost">Login</a>
+                <a href="post-property.html" class="btn btn-primary">
+                    Post Property <span class="badge badge-accent"
+                        style="margin-left: 0.5rem; background: rgba(255,255,255,0.2); color: white;">FREE</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+        <div class="hero-content">
+            <h1>Discover a Place <br>You'll Love to Live</h1>
+            <p class="text-light text-lg" style="margin-bottom: 3rem; opacity: 0.9;">
+                Connect with over 1 million properties, agents, and owners. <br>
+                Experience the future of real estate with AI insights.
+            </p>
+
+            <div class="search-wrapper">
+                <div class="search-tabs">
+                    <div class="search-tab active">Buy</div>
+                    <div class="search-tab">Rent</div>
+                    <div class="search-tab">Commercial</div>
+                </div>
+
+                <div class="search-input-group">
+                    <label>Location</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-location-dot text-primary"></i>
+                        <input type="text" placeholder="Enter City, Locality" value="Mumbai">
+                    </div>
+                </div>
+                <div class="search-divider"></div>
+                <div class="search-input-group">
+                    <label>Property Type</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-house text-primary"></i>
+                        <select>
+                            <option>Apartment</option>
+                            <option>Villa</option>
+                            <option>Plot</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search-divider"></div>
+                <div class="search-input-group">
+                    <label>Budget</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-indian-rupee-sign text-primary"></i>
+                        <select>
+                            <option>₹50L - ₹1Cr</option>
+                            <option>₹1Cr - ₹3Cr</option>
+                            <option>₹3Cr+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="padding: 0 2rem; border-radius: var(--radius-md);">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <div class="section-header">
+            <div>
+                <span class="badge badge-primary" style="margin-bottom: 0.5rem;">Handpicked</span>
+                <h2>Featured Properties</h2>
+                <p class="text-muted">Explore our curated list of premium properties</p>
+            </div>
+            <a href="listing.html" class="btn btn-outline">View All</a>
+        </div>
+
+        <div class="listing-grid" id="main-listing-grid">
+            <!-- Property Card 1 -->
+            <div class="card">
+                <div class="card-image"
+                    style="background-color: #cbd5e1; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-image fa-3x text-muted"></i>
+                    <img src="assets/apartment_brown.jpg" alt="Luxury Villa"
+                        style="width:100%; height:100%; object-fit: cover; position: absolute; top:0; left:0;"
+                        onerror="this.style.display='none'">
+
+                    <div class="card-badges">
+                        <span class="badge badge-primary"
+                            style="background: rgba(0,0,0,0.6); color: white; backdrop-filter: blur(4px);">Verified</span>
+                    </div>
+                    <div class="card-save">
+                        <i class="fa-regular fa-heart text-primary"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-price">₹4.5 Cr</div>
+                    <h3 class="card-title">Luxury 4BHK Villa with Pool</h3>
+                    <div class="card-location">
+                        <i class="fa-solid fa-location-dot" style="margin-right: 0.5rem;"></i> Bandra West, Mumbai
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                        <div class="feature-item"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+                        <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 3200 sqft</div>
+                    </div>
+                    <div
+                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border); display: flex; gap: 0.5rem;">
+                        <a href="property-detail.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+                        <button class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="card">
+                <div class="card-image"
+                    style="background-color: #cbd5e1; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-image fa-3x text-muted"></i>
+                    <img src="assets/bright_living.jpg" alt="Apartment"
+                        style="width:100%; height:100%; object-fit: cover; position: absolute; top:0; left:0;"
+                        onerror="this.style.display='none'">
+                    <div class="card-badges">
+                        <span class="badge badge-accent"
+                            style="background: rgba(16, 185, 129, 0.9); color: white;">New</span>
+                    </div>
+                    <div class="card-save">
+                        <i class="fa-regular fa-heart text-primary"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-price">₹1.2 Cr</div>
+                    <h3 class="card-title">Premium 2BHK Apartment</h3>
+                    <div class="card-location">
+                        <i class="fa-solid fa-location-dot" style="margin-right: 0.5rem;"></i> Whitefield, Bangalore
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-bed"></i> 2 Beds</div>
+                        <div class="feature-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                        <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 1100 sqft</div>
+                    </div>
+                    <div
+                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border); display: flex; gap: 0.5rem;">
+                        <a href="property-detail.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+                        <button class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="card">
+                <div class="card-image"
+                    style="background-color: #cbd5e1; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-image fa-3x text-muted"></i>
+                    <img src="assets/study_room.jpg" alt="Office"
+                        style="width:100%; height:100%; object-fit: cover; position: absolute; top:0; left:0;"
+                        onerror="this.style.display='none'">
+                    <div class="card-badges">
+                        <span class="badge badge-primary"
+                            style="background: rgba(0,0,0,0.6); color: white;">Commercial</span>
+                    </div>
+                    <div class="card-save">
+                        <i class="fa-regular fa-heart text-primary"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-price">₹8.5 Cr</div>
+                    <h3 class="card-title">Corporate Office Space</h3>
+                    <div class="card-location">
+                        <i class="fa-solid fa-location-dot" style="margin-right: 0.5rem;"></i> Cyber City, Gurgaon
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-layer-group"></i> 5th Floor</div>
+                        <div class="feature-item"><i class="fa-solid fa-chair"></i> Furnished</div>
+                        <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 5000 sqft</div>
+                    </div>
+                    <div
+                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border); display: flex; gap: 0.5rem;">
+                        <a href="property-detail.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+                        <button class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Features / Why Choose Us -->
+    <section class="container" style="padding-bottom: 4rem;">
+        <div class="text-center" style="margin-bottom: 3rem;">
+            <span class="badge badge-primary">Why UrbanNest?</span>
+            <h2>More Than Just Listings</h2>
+            <p class="text-muted">We provide data-driven insights to help you make the best decision.</p>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div class="feature-box">
+                <div class="icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>AI Price Estimator</h3>
+                <p class="text-muted text-sm">Get accurate property valuations instantly using our advanced AI
+                    algorithms based on market trends.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>Neighborhood Insights</h3>
+                <p class="text-muted text-sm">Check safety scores, school ratings, and connectivity details before you
+                    even visit.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-wrap"><i class="fa-solid fa-sack-dollar"></i></div>
+                <h3>ROI Calculator</h3>
+                <p class="text-muted text-sm">Calculate potential rental yields and future appreciation to make smart
+                    investment moves.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-wrap"><i class="fa-solid fa-check-double"></i></div>
+                <h3>Verified Listings</h3>
+                <p class="text-muted text-sm">Every property is physically verified by our field agents to ensure 100%
+                    authenticity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Promo Section / Interactive Estimator -->
+    <section class="container" id="ai-estimator">
+        <div class="ai-section"
+            style="padding: 3rem; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 1rem; position: relative; overflow: hidden; margin-top: 4rem;">
+            <!-- Decorative circle -->
+            <div
+                style="position: absolute; right: -50px; top: -50px; width: 300px; height: 300px; background: rgba(168, 85, 247, 0.1); border-radius: 50%; filter: blur(50px);">
+            </div>
+
+            <div class="flex" style="align-items: center; justify-content: space-between; gap: 4rem;">
+                <div class="ai-content" style="flex: 1;">
+                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">
+                        <i class="fa-solid fa-wand-magic-sparkles" style="color: #a855f7;"></i> AI Price Estimator
+                    </h2>
+                    <p style="color: #cbd5e1; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
+                        Our AI analyzes thousands of data points, market trends, and locality parameters to give you a
+                        highly accurate property valuation. Don't overpay for your dream home or sell for less.
+                    </p>
+
+                    <div id="ai-result-box"
+                        style="display: none; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.2); margin-top: 2rem;">
+                        <div class="text-sm text-light">Estimated Market Value</div>
+                        <div id="ai-price-value" style="font-size: 2.5rem; font-weight: 700; color: #10B981;">₹0</div>
+                        <div class="text-xs text-muted" style="margin-top: 0.5rem;" id="ai-price-range">Range: ₹0 - ₹0
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div
+                    style="flex: 1; background: white; padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text);">Enter Property Details</h3>
+                    <form onsubmit="handleAIEstimate(event)">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">City /
+                                Locality</label>
+                            <input type="text" id="aiLoc" placeholder="e.g. Bandra, Mumbai" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="flex gap-md" style="margin-bottom: 1.5rem;">
+                            <div style="flex: 1;">
+                                <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Property
+                                    Type</label>
+                                <select id="aiType"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                                    <option value="Apartment">Apartment</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                            </div>
+                            <div style="flex: 1;">
+                                <label class="font-bold text-sm"
+                                    style="display: block; margin-bottom: 0.5rem;">Bedrooms</label>
+                                <select id="aiBhk"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4+ BHK</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Area
+                                (sqft)</label>
+                            <input type="number" id="aiArea" placeholder="e.g. 1200" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #a855f7, #ec4899); border: none;">
+                            Get AI Estimate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo" style="color: white; margin-bottom: 1rem;">
+                        <i class="fa-solid fa-city"></i> UrbanNest
+                    </a>
+                    <p>UrbanNest is India's fastest growing property portal, dedicated to making home buying simplified
+                        and smarter with technology.</p>
+                    <div class="flex gap-sm" style="margin-top: 1.5rem;">
+                        <a href="#" class="btn btn-outline"
+                            style="border-radius: 50%; width: 40px; height: 40px; padding: 0; background: transparent; color: white; border-color: rgba(255,255,255,0.2);"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline"
+                            style="border-radius: 50%; width: 40px; height: 40px; padding: 0; background: transparent; color: white; border-color: rgba(255,255,255,0.2);"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline"
+                            style="border-radius: 50%; width: 40px; height: 40px; padding: 0; background: transparent; color: white; border-color: rgba(255,255,255,0.2);"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Explore</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy in Mumbai</a></li>
+                        <li><a href="#">Rent in Bangalore</a></li>
+                        <li><a href="#">Commercial Details</a></li>
+                        <li><a href="#">New Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Contact</div>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i> support@urbannest.com</li>
+                        <li><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +91 98765 43210</li>
+                        <li><i class="fa-solid fa-location-dot" style="margin-right:0.5rem;"></i> Tech Park, Bangalore
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.875rem;">
+                &copy; 2024 UrbanNest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

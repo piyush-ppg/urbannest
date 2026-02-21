@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury 4BHK Villa - UrbanNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation (Same as Home) -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-city"></i> UrbanNest
+            </a>
+
+            <nav class="nav-links hidden md:flex" style="display: flex; gap: 2rem; align-items: center;">
+                <a href="index.html">Home</a>
+                <a href="listing.html" class="active">Buy</a>
+                <a href="listing.html">Rent</a>
+                <a href="listing.html">Commercial</a>
+                <a href="#">New Projects</a>
+                <a href="#">Agents</a>
+            </nav>
+
+            <div class="flex items-center gap-sm">
+                <a href="#" class="btn btn-ghost">Login</a>
+                <a href="post-property.html" class="btn btn-primary">
+                    Post Property <span class="badge badge-accent"
+                        style="margin-left: 0.5rem; background: rgba(255,255,255,0.2); color: white;">FREE</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Property Header / Gallery -->
+    <div style="background: #0f172a; padding: 2rem 0; color: white;">
+        <div class="container">
+            <div class="flex justify-between items-end" style="margin-bottom: 2rem;">
+                <div>
+                    <h1 id="pd-title" style="color: white; margin-bottom: 0.5rem;">Luxury 4BHK Villa with Private Pool
+                    </h1>
+                    <div class="flex items-center gap-md text-light">
+                        <span id="pd-location"><i class="fa-solid fa-location-dot text-accent"></i> Bandra West,
+                            Mumbai</span>
+                        <span id="pd-beds"><i class="fa-solid fa-bed text-accent"></i> 4 Beds</span>
+                        <span id="pd-baths"><i class="fa-solid fa-bath text-accent"></i> 4 Baths</span>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div id="pd-price" style="font-size: 2.5rem; font-weight: 700; color: var(--accent);">₹4.5 Cr</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">₹14,062 / sqft</div>
+                </div>
+            </div>
+
+            <!-- Gallery Placeholder -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; height: 500px;">
+                <div
+                    style="background: #334155; border-radius: var(--radius-md); overflow: hidden; position: relative;">
+                    <img src="assets/modern_exterior.jpg" alt="Main View"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 1rem;">
+                    <div style="background: #334155; border-radius: var(--radius-md); overflow: hidden;">
+                        <img src="assets/luxury_living.jpg" alt="Interior"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div
+                        style="background: #334155; border-radius: var(--radius-md); overflow: hidden; position: relative;">
+                        <img src="assets/bright_living.jpg" alt="Pool"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; cursor: pointer;">
+                            + 12 More Photos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="container" style="padding: 4rem 2rem; display: grid; grid-template-columns: 2fr 1fr; gap: 4rem;">
+
+        <!-- Left Column: Details -->
+        <div>
+            <!-- Overview -->
+            <section style="margin-bottom: 3rem;">
+                <h3>Property Overview</h3>
+                <div
+                    style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; background: white; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+                    <div>
+                        <div class="text-muted text-sm">Project Size</div>
+                        <div class="font-bold">3,200 sqft</div>
+                    </div>
+                    <div>
+                        <div class="text-muted text-sm">Status</div>
+                        <div class="font-bold">Ready to Move</div>
+                    </div>
+                    <div>
+                        <div class="text-muted text-sm">Furnishing</div>
+                        <div class="font-bold">Semi-Furnished</div>
+                    </div>
+                    <div>
+                        <div class="text-muted text-sm">Age of Property</div>
+                        <div class="font-bold">New Construction</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Description -->
+            <section style="margin-bottom: 3rem;">
+                <h3>About Property</h3>
+                <p id="pd-desc" class="text-muted">
+                    Experience luxury living at its finest in this stunning 4BHK villa located in the heart of Bandra
+                    West.
+                    Designed by award-winning architects, this home features floor-to-ceiling windows, a private
+                    temperature-controlled pool,
+                    and a landscaped terrace garden. The spacious living area flows seamlessly into a gourmet kitchen
+                    equipped with top-tier appliances.
+                    <br><br>
+                    Perfect for families looking for privacy and exclusivity while being close to the city's best
+                    schools, restaurants, and shopping districts.
+                </p>
+            </section>
+
+            <!-- Amenities -->
+            <section style="margin-bottom: 3rem;">
+                <h3>Amenities</h3>
+                <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;">
+                    <div class="feature-item"><i class="fa-solid fa-person-swimming text-primary"></i> Private Pool
+                    </div>
+                    <div class="feature-item"><i class="fa-solid fa-dumbbell text-primary"></i> Gym</div>
+                    <div class="feature-item"><i class="fa-solid fa-car text-primary"></i> 3 Parking Spots</div>
+                    <div class="feature-item"><i class="fa-solid fa-shield-halved text-primary"></i> 24/7 Security</div>
+                    <div class="feature-item"><i class="fa-solid fa-tree text-primary"></i> Private Garden</div>
+                    <div class="feature-item"><i class="fa-solid fa-bolt text-primary"></i> Power Backup</div>
+                </div>
+            </section>
+
+            <!-- UNIQUE FEATURE: Neighborhood Insights -->
+            <section style="margin-bottom: 3rem; background: #EEF2FF; padding: 2rem; border-radius: var(--radius-lg);">
+                <div class="flex justify-between items-center" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0;">Neighborhood Insights</h3>
+                    <span class="badge badge-primary">UrbanNest Exclusive</span>
+                </div>
+
+                <div class="insight-grid">
+                    <div class="insight-card">
+                        <div class="score-circle">9.2</div>
+                        <div class="font-bold">Safety Score</div>
+                        <div class="text-xs text-muted">Very Safe Night/Day</div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="score-circle">8.5</div>
+                        <div class="font-bold">Lifestyle</div>
+                        <div class="text-xs text-muted">Cafes, Parks nearby</div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="score-circle">9.0</div>
+                        <div class="font-bold">Connectivity</div>
+                        <div class="text-xs text-muted">Metro: 500m</div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="score-circle">8.8</div>
+                        <div class="font-bold">Education</div>
+                        <div class="text-xs text-muted">3 Top Schools</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIQUE FEATURE: ROI Calculator -->
+            <section class="calculator-wrap" id="roi-calc">
+                <h3><i class="fa-solid fa-calculator text-primary"></i> Investment ROI Calculator</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem;">Estimate your returns if you buy this property for
+                    investment.</p>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <div style="margin-bottom: 1rem;">
+                            <label class="font-bold text-sm">Monthly Rental Income (₹)</label>
+                            <input type="range" id="rentRange" class="form-range" min="10000" max="500000" step="5000"
+                                value="50000" oninput="calculateROI()">
+                            <div class="flex justify-between text-sm text-primary font-bold">
+                                <span>₹10k</span>
+                                <span id="rentValue">₹50,000</span>
+                                <span>₹5L</span>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label class="font-bold text-sm">Yearly Appreciation (%)</label>
+                            <input type="range" id="appreciationRange" class="form-range" min="1" max="15" step="0.5"
+                                value="6" oninput="calculateROI()">
+                            <div class="flex justify-between text-sm text-primary font-bold">
+                                <span>1%</span>
+                                <span id="appreciationValue">6%</span>
+                                <span>15%</span>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label class="font-bold text-sm">Holding Period (Years)</label>
+                            <input type="range" id="yearsRange" class="form-range" min="1" max="30" step="1" value="5"
+                                oninput="calculateROI()">
+                            <div class="flex justify-between text-sm text-primary font-bold">
+                                <span>1 Yr</span>
+                                <span id="yearsValue">5 Yrs</span>
+                                <span>30 Yrs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: #F8FAFC; padding: 1.5rem; border-radius: var(--radius-md); text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="text-muted text-sm">Estimated Total Return</div>
+                        <div class="calc-result" id="totalReturn">₹0</div>
+                        <div class="text-muted text-sm" style="margin-top: 1rem;">Yield Percentage</div>
+                        <div class="text-primary font-bold text-xl" id="yieldValue">0%</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Right Column: Contact & Map -->
+        <div>
+            <div style="position: sticky; top: 100px;">
+                <div class="card" style="padding: 1.5rem; margin-bottom: 2rem;">
+                    <h3>Contact Agent</h3>
+                    <div class="flex items-center gap-sm" style="margin-bottom: 1rem;">
+                        <img src="https://ui-avatars.com/api/?name=Rohan+Sharma&background=random" alt="Agent"
+                            style="border-radius: 50%; width: 50px; height: 50px;">
+                        <div>
+                            <div class="font-bold">Rohan Sharma</div>
+                            <div class="text-xs text-muted">Premium Partner</div>
+                        </div>
+                    </div>
+                    <form onsubmit="event.preventDefault(); alert('Inquiry Sent!');">
+                        <input type="text" placeholder="Your Name"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;">
+                        <input type="email" placeholder="Your Email"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;">
+                        <input type="tel" placeholder="Phone Number"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;">
+                        <textarea rows="3"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;">I'm interested in this property. Please contact me.</textarea>
+                        <button class="btn btn-primary" style="width: 100%;">Get Callback</button>
+                    </form>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden; height: 300px;">
+                    <!-- Fake Maps Embed -->
+                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Bandra%20West,%20Mumbai+(UrbanNest%20Listing)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer (Same) -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 UrbanNest.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Init ROI Calc
+        window.onload = function () {
+            calculateROI();
+        }
+    </script>
+</body>
+
+</html>

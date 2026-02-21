@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Properties - UrbanNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-city"></i> UrbanNest
+            </a>
+
+            <nav class="nav-links hidden md:flex" style="display: flex; gap: 2rem; align-items: center;">
+                <a href="index.html">Home</a>
+                <a href="listing.html" class="active">Buy</a>
+                <a href="listing.html">Rent</a>
+                <a href="listing.html">Commercial</a>
+                <a href="#">New Projects</a>
+                <a href="#">Agents</a>
+            </nav>
+
+            <div class="flex items-center gap-sm">
+                <a href="#" class="btn btn-ghost">Login</a>
+                <a href="post-property.html" class="btn btn-primary">
+                    Post Property <span class="badge badge-accent"
+                        style="margin-left: 0.5rem; background: rgba(255,255,255,0.2); color: white;">FREE</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 2rem 0; font-size: 0.875rem;">
+        <a href="index.html" class="text-muted">Home</a> <span class="text-muted">/</span> <span>Properties for Sale in
+            Mumbai</span>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container grid" style="grid-template-columns: 280px 1fr; gap: 2rem; margin-bottom: 4rem;">
+
+        <!-- Filters Sidebar -->
+        <aside style="align-self: start;">
+            <div class="card" style="padding: 1.5rem;">
+                <div class="flex justify-between items-center" style="margin-bottom: 1.5rem;">
+                    <h3>Filters</h3>
+                    <button class="text-primary text-sm font-bold">Clear</button>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Location</label>
+                    <input type="text" placeholder="Locality or City" value="Mumbai"
+                        style="width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Property
+                        Type</label>
+                    <div class="flex gap-sm" style="flex-wrap: wrap;">
+                        <button class="badge badge-primary">Apartment</button>
+                        <button class="badge" style="border: 1px solid var(--border);">Villa</button>
+                        <button class="badge" style="border: 1px solid var(--border);">Plot</button>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Price Range</label>
+                    <input type="range" class="form-range" style="width: 100%;">
+                    <div class="flex justify-between text-xs text-muted">
+                        <span>₹10L</span>
+                        <span>₹10Cr+</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="font-bold text-sm" style="display: block; margin-bottom: 0.5rem;">Bedrooms</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button
+                            style="border:1px solid var(--border); width: 32px; height: 32px; border-radius: 4px;">1</button>
+                        <button
+                            style="border:1px solid var(--border); width: 32px; height: 32px; border-radius: 4px; background: var(--primary); color: white;">2</button>
+                        <button
+                            style="border:1px solid var(--border); width: 32px; height: 32px; border-radius: 4px;">3</button>
+                        <button
+                            style="border:1px solid var(--border); width: 32px; height: 32px; border-radius: 4px;">4+</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+            </div>
+        </aside>
+
+        <!-- Listing Grid -->
+        <main>
+            <div class="flex justify-between items-center" style="margin-bottom: 1.5rem;">
+                <h2>2,450 Properties Found</h2>
+                <select style="padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+                    <option>Sort by: Relevance</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Date Posted</option>
+                </select>
+            </div>
+
+            <div class="listing-grid" id="main-listing-grid"
+                style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-image" style="background-color: #cbd5e1; position: relative; overflow: hidden;">
+                        <img src="assets/luxury_living.jpg" alt="House"
+                            style="width:100%; height:100%; object-fit: cover;">
+                        <div class="card-badges"><span class="badge badge-primary"
+                                style="background: rgba(0,0,0,0.6); color: white;">Featured</span></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">₹2.1 Cr</div>
+                        <h3 class="card-title">3BHK Sea View Apartment</h3>
+                        <div class="card-location">Worli, Mumbai</div>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 3</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 3</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 1850 sqft</div>
+                        </div>
+                        <a href="property-detail.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-image" style="background-color: #cbd5e1; position: relative; overflow: hidden;">
+                        <img src="assets/apartment_brown.jpg" alt="House"
+                            style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">₹5.5 Cr</div>
+                        <h3 class="card-title">Independent House with Garden</h3>
+                        <div class="card-location">Juhu, Mumbai</div>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 5</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 5</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 4000 sqft</div>
+                        </div>
+                        <a href="property-detail.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-image" style="background-color: #cbd5e1; position: relative; overflow: hidden;">
+                        <img src="assets/modern_exterior.jpg" alt="House"
+                            style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">₹10.5 Cr</div>
+                        <h3 class="card-title">Sky Villa Penthouse</h3>
+                        <div class="card-location">Lower Parel, Mumbai</div>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 4</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 5</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 5500 sqft</div>
+                        </div>
+                        <a href="property-detail.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-image" style="background-color: #cbd5e1; position: relative; overflow: hidden;">
+                        <img src="assets/study_room.jpg" alt="House"
+                            style="width:100%; height:100%; object-fit: cover;">
+                        <div class="card-badges"><span class="badge badge-accent"
+                                style="background: rgba(16, 185, 129, 0.9); color: white;">New</span></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">₹85 L</div>
+                        <h3 class="card-title">Compact 1BHK Studio</h3>
+                        <div class="card-location">Andheri East, Mumbai</div>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> 1</div>
+                            <div class="feature-item"><i class="fa-solid fa-bath"></i> 1</div>
+                            <div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> 650 sqft</div>
+                        </div>
+                        <a href="property-detail.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <button class="btn btn-outline" style="padding: 0.75rem 3rem;">Load More</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
